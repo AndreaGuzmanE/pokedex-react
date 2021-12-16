@@ -42,7 +42,7 @@ const PokemonCard = (props) => {
     <Card sx={{ Width: 345 }}>
       <CardMedia
         component="img"
-        height="100"
+        height="200"
         sx={{ alignSelf:"center" }}
         image={image}
         alt="pokemon"
