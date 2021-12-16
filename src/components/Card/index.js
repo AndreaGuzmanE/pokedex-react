@@ -39,13 +39,13 @@ const PokemonCard = (props) => {
 
   return (
     <Card sx={{ Width: 345 }}>
-      <img src={image} alt="pokemon" />
+      <img src={image} alt="pokemon" alignSelf="center"/>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" alignSelf="center">
           {name}
         </Typography>
         {!modeMockApi && inPokedex ? (
-          <Typography sx={{ color: "#92D1B3" }} variant="h6" component="div">
+          <Typography sx={{ color: "#92D1B3" }} variant="h6" component="div" alignSelf="center">
             Guardado
           </Typography>
         ) : null}
