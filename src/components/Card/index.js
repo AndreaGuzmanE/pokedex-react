@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
@@ -39,9 +40,12 @@ const PokemonCard = (props) => {
 
   return (
     <Card sx={{ Width: 345 }}>
-      <div style={{ alignContent: "center" }}>
-        <img src={image} alt="pokemon"  />
-      </div>
+      <CardMedia
+        component="img"
+        sx={{ alignSelf:"center" }}
+        image={image}
+        alt="pokemon"
+      />
       <CardContent justifyContent="center">
         <Typography gutterBottom variant="h5" component="div" align="center">
           {name}
