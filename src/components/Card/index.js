@@ -39,8 +39,8 @@ const PokemonCard = (props) => {
 
   return (
     <Card sx={{ Width: 345 }}>
-      <div>
-        <img src={image} alt="pokemon" style={{ alignSelf: "center" }} />
+      <div style={{ alignContent: "center" }}>
+        <img src={image} alt="pokemon"  />
       </div>
       <CardContent justifyContent="center">
         <Typography gutterBottom variant="h5" component="div" align="center">
