@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { useHistory } from "react-router-dom";
 import { useOwnContext } from "../../store/dashboard/storeApi";
@@ -40,13 +41,9 @@ const PokemonCard = (props) => {
 
   return (
     <Card sx={{ Width: 345 }}>
-      <CardMedia
-        component="img"
-        height="230"
-        sx={{ alignSelf:"center" }}
-        image={image}
-        alt="pokemon"
-      />
+      <Box> 
+        <img src={image} alt="pokemon" style={{height:180, alignSelf:"center"}}/>
+      </Box>
       <CardContent justifyContent="center">
         <Typography gutterBottom variant="h5" component="div" align="center">
           {name}
