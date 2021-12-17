@@ -5,7 +5,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { useHistory } from "react-router-dom";
 import { useOwnContext } from "../../store/dashboard/storeApi";
@@ -41,17 +40,21 @@ const PokemonCard = (props) => {
 
   return (
     <Card sx={{ Width: 345 }}>
-      <Box> 
-        <img src={image} alt="pokemon" style={{height:180, alignSelf:"center"}}/>
-      </Box>
+      <CardMedia
+        component="img"
+        height="240"
+        sx={{ alignSelf:"center", width:250 }}
+        image={image}
+        alt="pokemon"
+      />
       <CardContent justifyContent="center">
-        <Typography gutterBottom variant="h5" component="div" align="center">
+        <Typography gutterBottom variant="h4" component="div" align="center">
           {name}
         </Typography>
         {!modeMockApi && inPokedex ? (
           <Typography
             sx={{ color: "#92D1B3" }}
-            variant="h6"
+            variant="h5"
             component="div"
             align="center"
           >
@@ -67,7 +70,7 @@ const PokemonCard = (props) => {
           alignItems: "center",
         }}
       >
-        <Button onClick={handleClick} size="small">
+        <Button onClick={handleClick} size="large" color="secondary">
           Detalle
         </Button>
         {pokemonInCart && !modeMockApi ? (
@@ -76,7 +79,8 @@ const PokemonCard = (props) => {
             disabled={!!inPokedex}
             variant="contained"
             color="success"
-            size="small"
+            size="large"
+            
           >
             Agregar
           </Button>
@@ -85,7 +89,7 @@ const PokemonCard = (props) => {
             onClick={handleDelete}
             variant="contained"
             color="error"
-            size="small"
+            size="large"
           >
             Eliminar
           </Button>

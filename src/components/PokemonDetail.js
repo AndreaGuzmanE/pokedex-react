@@ -22,6 +22,7 @@ const useStyles = makeStyles(() => ({
   },
   name: {
     textTransform: "uppercase",
+    align: "center"
   },
 }));
 
