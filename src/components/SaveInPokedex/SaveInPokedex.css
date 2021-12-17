@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
 
+.pokeball-not-save{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pokeball {
   width: 200px;
   height: 200px;
-  align-self: center;
 }
 
 .not-save {
@@ -13,5 +18,4 @@
   font-size: 35px;
   text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000,
     2px -2px 1px #000;
-    align-self: center;
 }

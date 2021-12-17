@@ -22,7 +22,6 @@ const useStyles = makeStyles(() => ({
   },
   name: {
     textTransform: "uppercase",
-    align: "center"
   },
 }));
 
@@ -47,7 +46,7 @@ const PokemonDetail = () => {
       {sprites === undefined ? null : (
         <Grid container justifyContent="center">
           <Card className="pokemon-container">
-            <Typography variant="h3" className={styles.name} paragraph>
+            <Typography variant="h3" className={styles.name} align="center">
               {name}
             </Typography>
             <Grid

@@ -4,7 +4,7 @@ import "./SaveInPokedex.css";
 
 const SaveInPokedex = () => {
   return (
-    <div>
+    <div className="pokeball-not-save">
       <img className="pokeball" src={Pokeball} alt="not-found" />
       <h3 className="not-save">No has guardado ningún pokemon</h3>
     </div>
